@@ -5,10 +5,10 @@ import Forecast from "./components/forecast/Forecast";
 import Search from "./components/search/Search";
 import Spinner from "./components/spinner/Spinner";
 const URL_DATA = {
-  url: "http://api.openweathermap.org/data/2.5/weather",
-  forecastUrl: "http://api.openweathermap.org/data/2.5/forecast",
+  url: "https://api.openweathermap.org/data/2.5/weather",
+  forecastUrl: "https://api.openweathermap.org/data/2.5/forecast",
   key: "31a5d88b09146c234b7ac6e735c74461",
-  iconUrl: "http://openweathermap.org/img/wn/",
+  iconUrl: "https://openweathermap.org/img/wn/",
 };
 
 class App extends React.Component {
