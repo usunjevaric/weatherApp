@@ -1,8 +1,12 @@
 .forecast {
-  height: 120px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  // // height: 120px;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
 }
 
 .forecast__item {
@@ -13,10 +17,17 @@
   padding: 5px 10px;
   border: 1px solid rgb(216, 216, 216);
   border-radius: 3px;
+  margin: 10px 0;
 }
 
 .forecast__item__day {
   text-align: center;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 540px) {
+  .forecast {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -3,7 +3,6 @@ import React from "react";
 const ForecastItem = (props) => {
   const date = new Date(props.dt);
   const day = date.toString().split(" ")[0];
-  console.log(date);
   return (
     <div className='forecast__item'>
       <div className='forecast__item__icon'>

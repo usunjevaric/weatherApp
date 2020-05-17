@@ -1,8 +1,6 @@
 import React from "react";
 import ForecastItem from "./ForecastItem";
 const Forecast = (props) => {
-  console.log(props.data);
-
   return (
     <div className='forecast'>
       {props.data.map((element) => (

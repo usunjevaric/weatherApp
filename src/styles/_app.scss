@@ -14,3 +14,9 @@
   background-color: #fff;
   border-radius: 5px;
 }
+
+@media (max-width: 500px) {
+  .app-wrapper {
+    margin: 40px 0;
+  }
+}

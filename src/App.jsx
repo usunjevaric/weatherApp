@@ -26,6 +26,7 @@ class App extends React.Component {
       errorMessage: null,
     },
     forecast: null,
+    getTime: null,
   };
 
   componentDidMount() {
@@ -114,7 +115,7 @@ class App extends React.Component {
             forecast.push(listEl);
           }
         });
-        this.setState({ forecast: forecast, loading: false });
+        this.setState({ forecast: forecast, loading: false, getTime: data.list[0].dt_txt });
       })
       .catch((err) => console.log(err));
   }

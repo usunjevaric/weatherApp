@@ -23,7 +23,7 @@ class Current extends React.Component {
     } = this.props.data;
     return (
       <div className='current'>
-        <div className='curent-left container'>
+        <div className='current-left container'>
           <h3 className='current__location'>
             {city}, {country}
           </h3>
@@ -35,11 +35,11 @@ class Current extends React.Component {
           <h2>{temp.toFixed(0)}°C</h2>
           <p className='current__desc'>{main}</p>
         </div>
-        <div className='curent-right container'>
-          <div className='current-container  current__wind'>Wind: {wind}m/s</div>
-          <div className='current-container current__humidity'>Cloudiness: {cloudiness}%</div>
-          <div className='current-container current__humidity'>Humidity: {humidity}%</div>
-          <div className='current-container current__humidity'>Presure: {pressure} hpa</div>
+        <div className='current-right container'>
+          <div className='current-row  current__wind'>Wind: {wind}m/s</div>
+          <div className='current-row current__humidity'>Cloudiness: {cloudiness}%</div>
+          <div className='current-row current__humidity'>Humidity: {humidity}%</div>
+          <div className='current-row current__humidity'>Presure: {pressure} hpa</div>
         </div>
       </div>
     );

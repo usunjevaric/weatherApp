@@ -16,7 +16,7 @@ h2 {
   margin: 0;
 }
 
-.current-container {
+.current-row {
   display: flex;
   align-items: center;
   width: 180px;
@@ -24,7 +24,7 @@ h2 {
 }
 
 .container {
-  margin: 0 30px;
+  // margin: 0 30px;
   background-color: #2c3e50bb;
   padding: 10px 20px;
   display: flex;
@@ -33,4 +33,25 @@ h2 {
   align-items: center;
   border-radius: 20px;
   color: #fff;
+}
+
+.current-left {
+  margin-left: 30px;
+  max-width: 220px;
+}
+.current-right {
+  margin-right: 30px;
+  max-width: 300px;
+}
+
+@media (max-width: 500px) {
+  .current {
+    flex-direction: column;
+  }
+  .current-left {
+    margin: 20px 0 10px 0;
+  }
+  .current-right {
+    margin: 10px 0 20px 0;
+  }
 }
