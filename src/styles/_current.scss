@@ -1,0 +1,57 @@
+.current {
+  background-image: url("../assets/images/wood-light-vacation-picnic-60006\ \(1\).jpg");
+  background-color: rgba(158, 158, 158, 0.712);
+  background-blend-mode: screen;
+  background-position: center;
+  background-size: cover;
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current h3,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.current-row {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.container {
+  // margin: 0 30px;
+  background-color: #2c3e50bb;
+  padding: 10px 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.current-left {
+  margin-left: 30px;
+  max-width: 220px;
+}
+.current-right {
+  margin-right: 30px;
+  max-width: 300px;
+}
+
+@media (max-width: 500px) {
+  .current {
+    flex-direction: column;
+  }
+  .current-left {
+    margin: 20px 0 10px 0;
+  }
+  .current-right {
+    margin: 10px 0 20px 0;
+  }
+}
