@@ -27,6 +27,7 @@ class App extends React.Component {
     },
     forecast: null,
     getTime: null,
+    notFound: null,
   };
 
   componentDidMount() {
@@ -90,7 +91,7 @@ class App extends React.Component {
           loading: false,
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => this.setState({ notFound: true }));
   }
 
   fetchForecast() {
@@ -117,7 +118,7 @@ class App extends React.Component {
         });
         this.setState({ forecast: forecast, loading: false, getTime: data.list[0].dt_txt });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {});
   }
 
   searchHandler = (city) => {
@@ -136,7 +137,9 @@ class App extends React.Component {
         </React.Fragment>
       );
     } else if (this.state.error.isError) {
-      currentForecast = <p>Enter location for search</p>;
+      currentForecast = <p className='current-error'>Enter location for search</p>;
+    } else if (this.state.notFound) {
+      currentForecast = <p className='current-error'>Location not found! Please try again</p>;
     } else {
       currentForecast = <Spinner />;
     }
@@ -144,7 +147,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <div className='app-wrapper'>
-          <Search search={(val) => this.searchHandler(val)} />
+          <Search search={(val) => this.searchHandler(val)} updateTime={this.state.getTime} />
           {currentForecast}
         </div>
       </div>

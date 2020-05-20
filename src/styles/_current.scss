@@ -44,6 +44,10 @@ h2 {
   max-width: 300px;
 }
 
+.current-error {
+  text-align: center;
+}
+
 @media (max-width: 500px) {
   .current {
     flex-direction: column;

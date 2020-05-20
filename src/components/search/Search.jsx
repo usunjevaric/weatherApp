@@ -26,6 +26,7 @@ class Search extends React.Component {
     this.toggleInputHandler();
   };
   render() {
+    const updateTime = new Date(this.props.updateTime);
     const { isInputOpen } = this.state;
     const input = (
       <input
@@ -46,6 +47,11 @@ class Search extends React.Component {
           {input}
           {icon}
         </div>
+        {this.props.updateTime ? (
+          <div className='search__time'>
+            Updated at <span>{updateTime.toLocaleTimeString()}</span>
+          </div>
+        ) : null}
       </div>
     );
   }
