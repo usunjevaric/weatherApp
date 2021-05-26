@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About Project [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://weatherapp-usunjevaric.netlify.app/)
+
+This application I use for learning async programming, using REST API, work with geolocation API.
+
+I have plan to refactor this project to modern react concepts
+
+## Technologies
+  - React JS
+  - HTML
+  - SCSS
+  - Axios
+  - OpenWeatherMap API
+
+
 ## Available Scripts
 
 In the project directory, you can run:
